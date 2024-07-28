@@ -5,6 +5,7 @@ import CaruselBlock from "./CaruselBlock";
 import FilterProject from "./FilterProject";
 import CatalogProject from "./CatalogProject";
 import PortfolioBlock from "./PortfolioBlock";
+import ContactBlock from "./ContactBlock";
 
 const Body = (props) => {
 
@@ -28,6 +29,9 @@ const Body = (props) => {
             </div>
             <div className={classes.portfolioBlock}>
                 <PortfolioBlock/>
+            </div>
+            <div className={classes.contactBlock}>
+                <ContactBlock/>
             </div>
         </div>
     );

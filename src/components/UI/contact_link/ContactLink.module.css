@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.1) translateX(-25px);
+    /*margin: 10px;*/
+}
+
+.iconLink {
+    width: 64px;
+    height: 64px;
+}
+
+.contactLink {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contactLink:hover {
+    text-decoration: black; /* Показать нижнее подчёркивание при наведении */
+}
+
+.contactLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Высота нижнего подчёркивания */
+    background: #000; /* Цвет нижнего подчёркивания */
+    transform: scaleX(0); /* Исходное состояние - скрыто */
+    transition: transform 0.2s; /* Плавный переход для нижнего подчёркивания */
+}

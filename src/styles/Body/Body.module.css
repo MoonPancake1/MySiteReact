@@ -14,9 +14,13 @@
 }
 
 .catalogProject {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .portfolioBlock {
+    margin-bottom: 20px;
+}
+
+.contactBlock {
     margin-bottom: 50px;
 }

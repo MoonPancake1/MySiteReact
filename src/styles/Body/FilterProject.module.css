@@ -5,6 +5,10 @@
 
 }
 
+.textMain {
+    font-size: 45px;
+}
+
 .containerInput {
     display: grid;
     margin-left: 50px;

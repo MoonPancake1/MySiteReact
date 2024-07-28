@@ -1,0 +1,52 @@
+.container {
+
+}
+
+.wrapperTextMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textMain {
+    background: -webkit-linear-gradient(0.1turn, #FF6A28, #FE2F57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+    margin: 0;
+}
+
+.stikerMain {
+    font-size: 45px;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.wrapperContactInfo {
+    display: block;
+}
+
+.wrapperMeContact {
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.meContact {
+    height: 400px;
+    width: 300px;
+    transition: transform 750ms ease;
+}
+
+.meContact:hover {
+    transform: scale(1.1) rotate(-15deg);
+}
+
+.containerLinks {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    height: 400px;
+    margin-left: 25px;
+}

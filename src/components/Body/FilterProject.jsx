@@ -8,7 +8,7 @@ const FilterProject = () => {
     return (
         <div className={classes.container}>
             <div className={classes.wrapperMainText}>
-                <h1>Сортировка</h1>
+                <h1 className={classes.textMain}>Сортировка</h1>
             </div>
             <div className={classes.containerInput}>
                 <div className={classes.wrapperInputBox1}>
