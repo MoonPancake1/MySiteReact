@@ -1,0 +1,17 @@
+.container {
+
+}
+
+.wrapperTitleBlock {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.TitleBlock {
+    margin: 0;
+    background: -webkit-linear-gradient(0.65turn, #8E2DE2, #4A00E0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,60 @@
+$blue: #0086e4;
+
+$primary-color: $blue;
+$input-height: 40px;
+$border-color: #dddddd;
+
+input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  height: 17px;
+}
+
+.inputGroup {
+    position: sticky;
+
+    &__label {
+        display: block;
+        position: absolute;
+        top: 0;
+        // to keep the position center
+        line-height: $input-height;
+        color: #000000;
+        left: 5px;
+        padding: 0 5px;
+        transition: line-height 200ms ease-in-out,
+            font-size 200ms ease-in-out,
+            top 200ms ease-in-out;
+        // firefox fix
+        pointer-events: none;
+        font-size: 18px;
+    }
+    &__input {
+        width: -webkit-fill-available;
+        height: $input-height;
+        border: 2px solid $border-color;
+        border-radius: 10px;
+        padding: 0 10px;
+        font-size: 18px;
+        // there must a required prop in input
+        // &:valid,
+        // need to add placeholder
+        &:not(:placeholder-shown),
+        &:focus {
+            + label {
+                background-color: white;
+                line-height: 10px;
+                opacity: 1;
+                font-size: 15px;
+                top: -5px;
+            }
+        }
+        &:focus {
+            outline: none;
+            border: 2px solid $primary-color;
+            + label {
+                color: $primary-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.buttonAuth {
+    align-items: center;
+    border: 0;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none; /* Убираем стандартное подчёркивание */
+    transition: color 0.3s; /* Плавный переход цвета текста */
+}
+
+.buttonAuth:hover::after {
+    transform: scaleX(1); /* Показать нижнее подчёркивание при наведении */
+}
+
+.buttonAuth::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Высота нижнего подчёркивания */
+    background: #000; /* Цвет нижнего подчёркивания */
+    transform: scaleX(0); /* Исходное состояние - скрыто */
+    transition: transform 0.2s; /* Плавный переход для нижнего подчёркивания */
+}

@@ -1,0 +1,22 @@
+.wrapper {
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    height: 44px;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pTag {
+    margin: 0;
+    font-size: 30px;
+}

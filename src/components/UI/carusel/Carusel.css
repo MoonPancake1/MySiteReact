@@ -1,0 +1,76 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 800px;
+  width: 100%; /* Ширина контейнера */
+  height: 450px; /* Высота контейнера */
+}
+
+.slide {
+  position: relative;
+  min-width: 800px;
+  height: 450px;
+  transition: transform 500ms ease, opacity 500ms ease;
+  opacity: 0.85; /* Начальная прозрачность для неактивных слайдов */
+}
+
+.active {
+  transform: scale(1); /* Увеличиваем текущий слайд на 10% */
+  z-index: 3;
+  opacity: 1; /* Полная непрозрачность для активного слайда */
+}
+
+.next {
+  transform: scale(0.9); /* Обычный размер для следующего слайда */
+  z-index: 1;
+  /*clip-path: inset(0 50% 0 0);*/
+}
+
+.prev {
+  transform: scale(0.9); /* Обычный размер для предыдущего слайда */
+  z-index: 2;
+}
+
+.carousel-button {
+  background: rgba(0,0,0,0);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.prv {
+  transform: rotate(180deg);
+}
+
+.btn-next{
+  height: 3em;
+  width: 3em;
+  transition: transform 300ms ease;
+}
+
+.btn-prev{
+  height: 3em;
+  width: 3em;
+  transition: transform 300ms ease;
+}
+
+.btn-next:hover {
+  transform: scale(1.2);
+}
+
+.btn-prev:hover {
+  transform: scale(1.2);
+}

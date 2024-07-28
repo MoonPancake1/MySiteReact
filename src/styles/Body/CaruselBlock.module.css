@@ -1,0 +1,33 @@
+.container {
+}
+
+.wrapperTextMain {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.textMain {
+    background: -webkit-linear-gradient(0.2turn, #20E4A4, #2CC9CC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+}
+
+.wrapperImagesCarusel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.stiker {
+    font-size: 100px;
+    margin: 0;
+    margin-left: 50px;
+    transform: rotate(15deg);
+    height: 125px;
+    width: 125px;
+}

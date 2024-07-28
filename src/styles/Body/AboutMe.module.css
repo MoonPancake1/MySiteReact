@@ -1,0 +1,77 @@
+.wrapper {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.mainPart {
+    display: grid;
+}
+
+.textAbout {
+    grid-column: 1;
+}
+
+.textMain {
+    background: -webkit-linear-gradient(0.65turn, #F464FE, #FF0083);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+}
+
+.textSubMain {
+    background: -webkit-linear-gradient(0.15turn, #FE2F57, #FF6A28);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+.spanP {
+    display: flex;
+    font-size: 30px;
+}
+
+.textSubLi {
+    background: -webkit-linear-gradient(0.15turn, #FE2F57, #FF6A28);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 60px;
+    margin: 0;
+}
+
+.subLiStiker {
+    padding-left: 5px;
+    margin: 0;
+}
+
+.wrapperMe {
+    display: flex;
+    grid-column: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.me {
+    width: 394px;
+    height: 525px;
+}
+
+.stikers {
+    display: grid;
+    margin: 0;
+    height: 150px;
+}
+
+.stiker1 {
+    font-size: 150px;
+    margin-top: 50px;
+    margin-left: 25px;
+    transform: rotate(15deg);
+}
+
+.stiker2 {
+    font-size: 80px;
+    transform: rotate(-15deg);
+}
