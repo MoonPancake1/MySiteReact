@@ -27,8 +27,7 @@ const ContactLink = (props) => {
     }
 
     return (
-        <a href={link} target="_blank" className={classes.contactLink}
-        onClick={() => {navigator.clipboard.writeText(props.link)}}>
+        <a href={link} target="_blank" className={classes.contactLink} rel="noreferrer">
             <div className={classes.container}>
                 <img src={icon} alt="" className={classes.iconLink}/>
                 <h2>{props.link}</h2>
