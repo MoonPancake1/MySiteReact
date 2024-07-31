@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
 
-    const [title, setTitle] = React.useState("Главная страница");
+    const [Title, setTitle] = React.useState("Главная страница");
 
     function changeTitle(newTitle) {
         setTitle(newTitle);
@@ -14,7 +14,7 @@ function App() {
 
   return (
       <div className="App">
-          <Header title={title} login={false}/>
+          <Header title={Title} login={false}/>
           {/*<BodyExample changeTitle={changeTitle}/>*/}
           <Body changeTitle={changeTitle}/>
           <Footer/>
