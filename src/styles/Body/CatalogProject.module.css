@@ -19,6 +19,7 @@
 
 .containerProject{
     display: grid;
+    overflow: hidden;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-left: 50px;

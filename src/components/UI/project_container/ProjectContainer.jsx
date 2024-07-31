@@ -1,10 +1,12 @@
 import React from 'react';
 import classes from "./ProjectContainer.module.css"
+import ProjectCard from "../project_card/ProjectCard";
 
-const ProjectContainer = () => {
+const ProjectContainer = (props) => {
     return (
         <div className={classes.container}>
-            В разработке...
+            <ProjectCard project={props.project}/>
+            <h1>{props.project.title}</h1>
         </div>
     );
 };

@@ -16,5 +16,40 @@
 }
 
 .spanAch {
+    width: 100%;
+}
 
+.textAch {
+    margin: 15px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.btnAch {
+    position: relative;
+    text-decoration: none; /* Убираем стандартное подчёркивание */
+    transition: color 0.3s; /* Плавный переход цвета текста */
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.btnAch:hover::after {
+    transform: scaleX(1); /* Показать нижнее подчёркивание при наведении */
+}
+
+.btnAch::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Высота нижнего подчёркивания */
+    background: #000; /* Цвет нижнего подчёркивания */
+    transform: scaleX(0); /* Исходное состояние - скрыто */
+    transition: transform 0.3s; /* Плавный переход для нижнего подчёркивания */
 }

@@ -34,7 +34,7 @@ const AboutMe = () => {
             </div>
             <div className={classes.stikers}>
                 <div style={{gridColumn: "1/9"}}>
-                    <div className={classes.stiker1}>🎲</div>
+                    <div className={classes.stiker1}>🏆</div>
                 </div>
                 <div style={{gridColumn: "9/10"}}>
                     <div className={classes.stiker2}>🎯</div>
