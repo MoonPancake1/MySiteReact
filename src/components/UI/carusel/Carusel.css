@@ -21,8 +21,8 @@
   position: absolute;
   min-width: 800px;
   height: 450px;
-  transition: transform 400ms ease, opacity 400ms ease;
-  opacity: 0.85; /* Начальная прозрачность для неактивных слайдов */
+  transition: transform 400ms ease-out, opacity 400ms ease;
+  opacity: 0.65; /* Начальная прозрачность для неактивных слайдов */
 }
 
 .active {
@@ -34,7 +34,6 @@
 .next {
   transform: scale(0.9) translateX(500px); /* Обычный размер для следующего слайда */
   z-index: 1;
-  /*clip-path: inset(0 50% 0 0);*/
 }
 
 .prev {

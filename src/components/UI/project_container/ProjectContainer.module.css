@@ -1,8 +1,49 @@
 .container {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: block;
     width: 100%;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    max-height: 600px;
+    justify-items: center;
+    margin-bottom: 100px;
+}
+
+.infoCard {
+    display: block;
+    justify-items: flex-end;
+    width: 100%;
+    max-height: 600px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    background-color: transparent;
+    border: none;
+}
+
+.btn:hover {
+    /*background-color: rgba(247, 247, 247);*/
+    /*background: linear-gradient(45deg, #C5F0F8, #FFDED5);*/
+    border-radius: 15px;
+    border: 3px solid rgba(120, 47, 239, 1);
+    cursor: pointer;
+    padding: 22px;
+}
+
+.wrapperInfoText{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    margin-bottom: 15px;
+}
+
+.infoText {
+    padding: 0;
+    margin: 0;
 }

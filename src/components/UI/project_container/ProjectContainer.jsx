@@ -5,10 +5,25 @@ import ProjectCard from "../project_card/ProjectCard";
 const ProjectContainer = (props) => {
     return (
         <div className={classes.container}>
-            <ProjectCard project={props.project}/>
-            <h1>{props.project.title}</h1>
+            <button className={classes.btn}>
+                <ProjectCard project={props.project}/>
+                <div className={classes.infoCard}>
+                    <div className={classes.wrapperInfoText}>
+                        <p className={classes.infoText}>
+                            Название: {props.project.title}
+                        </p>
+                    </div>
+                    <div className={classes.wrapperInfoText}>
+                        <p className={classes.infoText}>
+                            Описание: {props.project.desc.length >= 50
+                            ? props.project.desc.slice(0, 100) + '...'
+                            : props.project.desc}
+                        </p>
+                    </div>
+                </div>
+            </button>
         </div>
-    );
+);
 };
 
 export default ProjectContainer;

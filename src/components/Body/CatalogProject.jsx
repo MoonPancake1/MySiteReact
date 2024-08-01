@@ -46,13 +46,12 @@ const CatalogProject = () => {
             <div className={classes.wrapperTitleBlock}>
                 <h1 className={classes.TitleBlock}>Каталог проектов</h1>
             </div>
-            <div className={classes.containerProject}>
-                {dataProject.map((project, index) => (
-                    <ProjectContainer project={project} key={index} />
-                ))}
-                {/*<ProjectContainer/>*/}
-                {/*<ProjectContainer/>*/}
-                {/*<ProjectContainer/>*/}
+            <div className={classes.wrapperContainer}>
+                <div className={classes.containerProject}>
+                    {dataProject.map((project, index) => (
+                        <ProjectContainer project={project} key={index}/>
+                    ))}
+                </div>
             </div>
         </div>
     );
