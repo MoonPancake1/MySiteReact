@@ -28,5 +28,8 @@
 }
 
 .stiker {
+    width: 84px;
+    height: 84px;
     transform: rotate(15deg);
+    margin-bottom: 16px;
 }

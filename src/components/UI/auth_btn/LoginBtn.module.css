@@ -27,3 +27,9 @@
     transform: scaleX(0); /* Исходное состояние - скрыто */
     transition: transform 0.2s; /* Плавный переход для нижнего подчёркивания */
 }
+
+.stikerAuth {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}

@@ -12,7 +12,7 @@ const InputBox = (props) => {
                    required={true}
             />
             <label className={classes.inputGroup__label}
-                   htmlFor={props.name}>{props.placeholder}</label>
+                   htmlFor={props.name}><img src={props.img} alt="" className={classes.imgStick}/>{props.placeholder}</label>
         </div>
     );
 };

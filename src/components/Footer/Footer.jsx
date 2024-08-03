@@ -13,7 +13,8 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className={classes.wrapperStiker}>
-                    <p className={classes.stiker}>📝</p>
+                    <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f4dd.png" alt=""
+                       className={classes.stiker} />
                 </div>
             </div>
         </footer>

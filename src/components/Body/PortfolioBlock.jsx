@@ -70,7 +70,8 @@ const PortfolioBlock = () => {
         <div className={classes.container}>
             <div className={classes.wrapperTextMain}>
                 <h1 className={classes.textMain}>Портфолио</h1>
-                <h1 className={classes.stikerMain}>🏆</h1>
+                <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f3c6.png" alt=""
+                className={classes.stikerMain}/>
             </div>
             <div className={classes.wrapperPortfolio}>
                 {parseAchievements(achievements).map((achievement) => (
@@ -78,7 +79,8 @@ const PortfolioBlock = () => {
                 ))}
             </div>
             <div className={classes.wrapperStikerPlane}>
-                <h1 className={classes.stikerPlane}>🧑🏻‍🎓</h1>
+                <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f468-200d-1f393.png" alt=""
+                className={classes.stikerPlane}/>
             </div>
         </div>
     );

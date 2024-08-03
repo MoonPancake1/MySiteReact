@@ -18,7 +18,8 @@
 
 .stikerMain {
     font-size: 45px;
-    margin: 0;
+    width: 45px;
+    height: 45px;
     margin-left: 15px;
 }
 
@@ -37,6 +38,7 @@
 .meContact {
     height: 400px;
     width: 300px;
+    border-radius: 25px;
     transition: transform 750ms ease;
 }
 

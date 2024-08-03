@@ -13,7 +13,8 @@ const LoginBtn = () => {
             className={classes.buttonAuth}
             role="button"
             onClick={redirect}>
-            🔑 Войти
+            <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f511.png" alt=""
+            className={classes.stikerAuth}/> Войти
         </button>
 )
     ;

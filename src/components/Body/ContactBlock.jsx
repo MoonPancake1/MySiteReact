@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from '../../styles/Body/ContactBlock.module.css';
-import meContact from '../../images/meContact.png';
+import meContact from '../../images/meContact.jpg';
 import ContactLink from "../UI/contact_link/ContactLink";
 
 const ContactBlock = () => {
@@ -8,7 +8,8 @@ const ContactBlock = () => {
         <div className={classes.container}>
             <div className={classes.wrapperTextMain}>
                 <h1 className={classes.textMain}>Связь со мной</h1>
-                <h1 className={classes.stikerMain}>🕊️</h1>
+                <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f54a-fe0f.png" alt=""
+                    className={classes.stikerMain}/>
             </div>
             <div className={classes.wrapperContactInfo}>
                 <div className={classes.wrapperMeContact}>

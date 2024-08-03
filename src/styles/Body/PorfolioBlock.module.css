@@ -16,8 +16,8 @@
 }
 
 .stikerMain {
-    margin: 0;
-    font-size: 50px;
+    width: 60px;
+    height: 60px;
     margin-left: 10px;
 }
 
@@ -30,13 +30,12 @@
 
 .wrapperStikerPlane {
     display: grid;
-    overflow: hidden;
 }
 
 .stikerPlane {
     grid-column: 9/10;
-    margin: 0;
-    font-size: 144px;
+    margin: 0 0 40px 0;
     transform: rotate(-15deg);
-    width: 144px;
+    width: 162px;
+    height: 162px;
 }

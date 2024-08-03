@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import classes from "../../styles/Body/CaruselBlock.module.css";
 import Carusel from '../UI/carusel/Carusel'
 
@@ -39,7 +39,8 @@ const CaruselBlock = () => {
                 <Carusel images={imagesData} />
             </div>
             <div className={classes.wrapperStiker}>
-                <p className={classes.stiker}>🎠</p>
+                <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f3a0.png" alt=""
+                className={classes.stiker}/>
             </div>
         </div>
     );
