@@ -1,3 +1,11 @@
+# vC.Main v.0.0.1.3
+
+vC.Main – сайт-портфолио, где можно увидеть и потестить все мои проекты
+
+Обновления:
+
+- vC.Main **v.0.0.1.3**: добавлена реализация методов для работы с данными и coockie пользователя
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

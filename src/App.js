@@ -43,33 +43,27 @@ function App() {
 
     }
 
-    function authUser(access_token){
+    async function authUser(access_token){
         const headers = new Headers();
         headers.append("accept", "application/json");
-        headers.append("Authorization", `Bearer ${access_token}`);
+        headers.append("Authorization", "Bearer " + access_token.toString());
 
         const init = {
             method: "GET",
             headers: headers,
         };
+        const req = new Request("https://id.vchern.me/id/users/me");
+        const res = await fetch(req, init).then(res => {
+            if (res.status === 401) {
+                updateAccessToken(cookies.refresh_token);
+                authUser(cookies.access_token);
+            }
+            return res.json();
+        })
 
-        const req = new Request("https://id.vchern.me/id/users/me", init);
-
-        fetch(req).then(response => {
-                if (response.status === 401) {
-                    console.log(cookies.access_token);
-                    console.log(updateAccessToken(cookies.refresh_token));
-                    console.log(cookies.access_token);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(data);
-                return data;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        const jsonData = await res;
+        console.log(jsonData);
+        return jsonData;
     }
 
     function getTokens(username, password){
@@ -87,7 +81,9 @@ function App() {
             body: userData
         };
 
-        fetch('https://id.vchern.me/id/login/tokens', init)
+        const req = new Request("https://id.vchern.me/id/login/tokens/");
+
+        fetch(req, init)
             .then(res => {
                 if (res.status === 422) {
                     throw new Error("Данные некорректные!");
@@ -97,6 +93,7 @@ function App() {
             .then(data => {
                 setCookie('access_token', data.access_token)
                 setCookie('refresh_token', data.refresh_token)
+                console.log(data);
                 return JSON.stringify(data)
             })
             .catch(error => {
@@ -111,8 +108,7 @@ function App() {
   return (
       <div className="App">
           <Header title={Title}/>
-          {authUser(cookies.access_token)}
-          <Body changeTitle={changeTitle} authUser={authUser} cookies={cookies}/>
+          <Body changeTitle={changeTitle} authUser={authUser} getTokens={getTokens} cookies={cookies}/>
           <Footer/>
       </div>
   );

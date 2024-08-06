@@ -26,7 +26,7 @@ const AboutMe = () => {
                             className={classes.subLiStiker}/>
                     </span>
                         <span className={classes.spanP}>
-                        <p className={classes.textSubLi}>• Product-менеджер</p>
+                        <p className={classes.textSubLi}>• Project-менеджер</p>
                         <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f4bc.png" alt=""
                              className={classes.subLiStiker}/>
                     </span>

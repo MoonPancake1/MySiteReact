@@ -9,15 +9,26 @@ import ContactBlock from "./ContactBlock";
 
 const Body = (props) => {
 
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState('');
 
     function changeTitle(title) {
         props.changeTitle(title);
     }
 
+    function getTokensUser() {
+        try {
+            props.getTokens('refa', '123');
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     function getDataUser() {
         try {
-            setUser(props.authUser(props.cookies.access_token));
+            const tmp = props.authUser(props.cookies.access_token);
+            tmp.then(userData => {
+                setUser(userData);
+            })
         } catch (e) {
             console.log(e);
         }
@@ -25,6 +36,13 @@ const Body = (props) => {
 
     return (
         <div className={classes.container}>
+            <p>{user.nickname}</p>
+            <button onClick={getTokensUser}>
+                get tokens
+            </button>
+            <button onClick={getDataUser}>
+                get user info
+            </button>
             <div className={classes.aboutMe}>
                 <AboutMe/>
             </div>
