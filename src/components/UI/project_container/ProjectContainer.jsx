@@ -30,17 +30,15 @@ const ProjectContainer = (props) => {
                         <p className={classes.infoText}>
                             Рейтинг: {props.project.rate}/10
                         </p>
-                        <p className={classes.infoText}>
-                            <div className={classes.wrapperStatusCode}>
-                                Статус:
-                                {props.project.status === 'active'
-                                    ? <p className={classes.active}>работает</p>
-                                    : props.project.status === 'in develop'
-                                        ? <p className={classes.develop}>в разработке</p>
-                                        : <p className={classes.inactive}>не работает</p>
-                                }
-                            </div>
-                        </p>
+                        <div className={classes.wrapperStatusCode}>
+                            Статус:
+                            {props.project.status === 'active'
+                                ? <p className={classes.active}>работает</p>
+                                : props.project.status === 'in develop'
+                                    ? <p className={classes.develop}>в разработке</p>
+                                    : <p className={classes.inactive}>не работает</p>
+                            }
+                        </div>
                     </div>
                     <button className={classes.moreInfoBtn}>
                         <h1 className={classes.moreInfoText}>Подробнее</h1>

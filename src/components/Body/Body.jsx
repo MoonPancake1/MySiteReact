@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "../../styles/Body/Body.module.css";
 import AboutMe from "./AboutMe";
 import CaruselBlock from "./CaruselBlock";
@@ -9,8 +9,18 @@ import ContactBlock from "./ContactBlock";
 
 const Body = (props) => {
 
+    const [user, setUser] = useState(null);
+
     function changeTitle(title) {
         props.changeTitle(title);
+    }
+
+    function getDataUser() {
+        try {
+            setUser(props.authUser(props.cookies.access_token));
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     return (
