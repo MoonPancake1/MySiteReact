@@ -20,7 +20,9 @@ const ProjectContainer = (props) => {
                 <div className={classes.infoCard}>
                     <div className={classes.wrapperInfoText}>
                         <p className={classes.infoTextName}>
-                            {props.project.title}
+                            {props.project.title.length > 14
+                            ? `${props.project.title.substring(0, 11)}...`
+                            : props.project.title}
                         </p>
                     </div>
                     <div className={classes.wrapperInfoText}>
@@ -28,7 +30,9 @@ const ProjectContainer = (props) => {
                             Просмотры: {view}
                         </p>
                         <p className={classes.infoText}>
-                            Рейтинг: {props.project.rate}/10
+                            {props.project.rate === -1
+                            ? `Оценок пока нет`
+                            : `Рейтинг: ${props.project.rate}/10`}
                         </p>
                         <div className={classes.wrapperStatusCode}>
                             Статус:
