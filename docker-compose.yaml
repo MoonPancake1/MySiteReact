@@ -7,6 +7,6 @@ services:
       - '3000:3000'
     volumes:
       - .:/app
-      - .:/node_modules
+      - .node_modules
     stdin_open: true
     tty: true
