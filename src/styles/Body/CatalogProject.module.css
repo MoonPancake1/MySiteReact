@@ -28,3 +28,17 @@
     grid-auto-rows: minmax(720px, 1fr);
     gap: 10px;
 }
+
+.wrapperLoader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperError {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

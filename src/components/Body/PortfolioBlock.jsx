@@ -1,8 +1,24 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from '../../styles/Body/PorfolioBlock.module.css'
 import AchievementBlock from "../UI/achievement/AchievementBlock";
+import {useFetching} from "../hooks/useFetching";
+import AchievementsService from "../../Api/AchievementsService";
+import Loader from "../UI/loader/Loader";
+
 
 const PortfolioBlock = () => {
+
+    const [achievements, setAchievements] = useState([]);
+    const [fetchAchievements, isLoading, achievementError] = useFetching(
+        async () => {
+            const achievements = await AchievementsService.getAchievements();
+            setAchievements(achievements);
+        }
+    )
+
+    useEffect(() => {
+        fetchAchievements();
+    }, []);
 
     // A (Распространённое)
     // C (Обычное)
@@ -10,57 +26,26 @@ const PortfolioBlock = () => {
     // R (Редкое)
     // RR (Очень редкое)
     // RRR (Легендарное)
-    const achievements =
-        {
-            2024: [
-                {
-                    id: 1,
-                    course: 'Тренировки по алгоритмам 5.0',
-                    type: 'Сертификат о прохождении курса',
-                    company: 'Yandex',
-                    link: 'https://id.vchern.me/docs',
-                    rate: 'S',
-                    year: '2024'
-                }
-            ],
-            2023: [
-                {
-                    id: 2,
-                    course: 'Python Pro',
-                    type: 'Сертификат о прохождении курса',
-                    company: 'Uchi Doma',
-                    link: 'https://id.vchern.me/docs',
-                    rate: 'R',
-                    year: '2023'
-                },
-                {
-                    id: 3,
-                    course: 'Введение в программирование на языке \n' +
-                        'Python',
-                    type: 'Сертификат о прохождении курса',
-                    company: 'Сириус.Курсы',
-                    link: 'https://id.vchern.me/docs',
-                    rate: 'C',
-                    year: '2023'
-                },
-                {
-                    id: 4,
-                    course: 'Введение в программирование (С++)',
-                    type: 'Сертификат о прохождении курса',
-                    company: 'Yandex',
-                    link: 'https://id.vchern.me/docs',
-                    rate: 'S',
-                    year: '2023'
-                }
-            ]
-        }
 
     function parseAchievements(achievements) {
 
         const achBlocks = [];
 
-        for (let i in achievements) {
-            achBlocks.push(<AchievementBlock key={i} year={i} achievements={achievements[i]} />);
+        const filteredAchievements = {}
+        
+        for (const i in achievements){
+            const year = achievements[i].year.split('-')[0];
+            
+            if (filteredAchievements[year]){
+                filteredAchievements[year].push(achievements[i])
+            } else {
+                filteredAchievements[year] = []
+                filteredAchievements[year].push(achievements[i])
+            }
+        }
+
+        for (let i in filteredAchievements) {
+            achBlocks.push(<AchievementBlock key={i} year={i} achievements={filteredAchievements[i]} />);
         }
 
         return achBlocks.reverse();
@@ -74,12 +59,24 @@ const PortfolioBlock = () => {
                 className={classes.stikerMain}/>
             </div>
             <div className={classes.wrapperPortfolio}>
-                {parseAchievements(achievements).map((achievement) => (
-                    achievement
-                ))}
+                {achievementError &&
+                    <div className={classes.wrapperError}>
+                        <h1>Произошла ошибка!</h1>
+                    </div>
+                }
+                {isLoading === true
+                    ?   <div className={classes.wrapperLoader}>
+                            <Loader />
+                        </div>
+                    :   <div>
+                            {parseAchievements(achievements).map((achievementBlock) => (
+                                achievementBlock
+                            ))}
+                        </div>
+                }
             </div>
             <div className={classes.wrapperStikerPlane}>
-                <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f468-200d-1f393.png" alt=""
+            <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f468-200d-1f393.png" alt=""
                 className={classes.stikerPlane}/>
             </div>
         </div>

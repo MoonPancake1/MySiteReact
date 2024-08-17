@@ -39,3 +39,17 @@
     width: 162px;
     height: 162px;
 }
+
+.wrapperLoader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperError {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
