@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import classes from '../../styles/Body/CatalogProject.module.css'
-import ProjectContainer from "../UI/project_container/ProjectContainer";
-import ProjectService from "../../Api/ProjectService";
-import Loader from "../UI/loader/Loader";
-import {useFetching} from "../hooks/useFetching";
+import classes from '../../../styles/Body/Main/CatalogProject.module.css'
+import ProjectContainer from "../../UI/project_container/ProjectContainer";
+import ProjectService from "../../../Api/ProjectService";
+import Loader from "../../UI/loader/Loader";
+import {useFetching} from "../../hooks/useFetching";
 
 const CatalogProject = () => {
 

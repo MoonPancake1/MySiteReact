@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './AchievementBlock.module.css';
-import '../../../styles/Body/rate.css'
-import button from "bootstrap/js/src/button";
+import '../../../styles/Body/Main/rate.css';
 
 const AchievementBlock = (props) => {
 

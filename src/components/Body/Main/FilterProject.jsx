@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from "../../styles/Body/FilterProject.module.css";
-import InputBox from "../UI/input_box/InputBox";
-import ButtonSearch from "../UI/buttonSearch/ButtonSearch";
+import classes from "../../../styles/Body/Main/FilterProject.module.css";
+import InputBox from "../../UI/input_box/InputBox";
+import ButtonSearch from "../../UI/buttonSearch/ButtonSearch";
 
 
 const FilterProject = () => {

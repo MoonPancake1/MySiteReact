@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from '../../styles/Body/ContactBlock.module.css';
-import meContact from '../../images/meContact.jpg';
-import ContactLink from "../UI/contact_link/ContactLink";
+import classes from '../../../styles/Body/Main/ContactBlock.module.css';
+import meContact from '../../../images/meContact.jpg';
+import ContactLink from "../../UI/contact_link/ContactLink";
 
 const ContactBlock = () => {
     return (
