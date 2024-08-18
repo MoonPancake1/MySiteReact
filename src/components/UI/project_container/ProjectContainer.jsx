@@ -1,8 +1,11 @@
 import React from 'react';
 import classes from "./ProjectContainer.module.css"
 import ProjectCard from "../project_card/ProjectCard";
+import {useNavigate} from "react-router-dom";
 
 const ProjectContainer = (props) => {
+
+    const router = useNavigate();
 
     let view;
 
@@ -44,7 +47,7 @@ const ProjectContainer = (props) => {
                             }
                         </div>
                     </div>
-                    <button className={classes.moreInfoBtn}>
+                    <button className={classes.moreInfoBtn} onClick={() => router(`project/${props.project.id}`)}>
                         <h1 className={classes.moreInfoText}>Подробнее</h1>
                     </button>
                 </div>

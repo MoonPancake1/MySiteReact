@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import classes from '../../styles/Body/PorfolioBlock.module.css'
-import AchievementBlock from "../UI/achievement/AchievementBlock";
-import {useFetching} from "../hooks/useFetching";
-import AchievementsService from "../../Api/AchievementsService";
-import Loader from "../UI/loader/Loader";
+import classes from '../../../styles/Body/Main/PorfolioBlock.module.css'
+import AchievementBlock from "../../UI/achievement/AchievementBlock";
+import {useFetching} from "../../hooks/useFetching";
+import AchievementsService from "../../../Api/AchievementsService";
+import Loader from "../../UI/loader/Loader";
 
 
 const PortfolioBlock = () => {

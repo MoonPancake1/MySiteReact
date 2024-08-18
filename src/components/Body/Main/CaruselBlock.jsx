@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from "../../styles/Body/CaruselBlock.module.css";
-import Carusel from '../UI/carusel/Carusel'
+import classes from "../../../styles/Body/Main/CaruselBlock.module.css";
+import Carusel from '../../UI/carusel/Carusel'
 
 
 const CaruselBlock = () => {
