@@ -52,39 +52,6 @@
     margin: 0;
 }
 
-.wrapperStatusCode {
-    padding: 0;
-    margin: 0;
-    font-size: 26px;
-    font-weight: 300;
-    display: flex;
-    gap: 8px;
-}
-
-.active {
-    background: linear-gradient(0.15turn, #04CE9B, #64E408);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    font-weight: 400;
-}
-
-.develop {
-    background: linear-gradient(0.15turn, #FF9415, #FFC709);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    font-weight: 400;
-}
-
-.inactive {
-    background: linear-gradient(0.15turn, #EB1E80, #F42A5A);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    font-weight: 400;
-}
-
 .moreInfoBtn {
     width: 100%;
     height: 60px;

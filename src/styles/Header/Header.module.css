@@ -1,21 +1,23 @@
 .wrapper {
-    display: grid;
+    display: flex;
     grid-template-columns: auto;
     height: 100px;
 }
 
 .logo {
-    grid-column: 1/7;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20%;
 }
 
 .titleHeader {
-    grid-column: 9/25;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 60%;
+
 }
 
 .mainText {
@@ -25,8 +27,8 @@
 }
 
 .auth {
-    grid-column: 25/32;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20%;
 }

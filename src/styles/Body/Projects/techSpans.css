@@ -1,0 +1,67 @@
+.lang {
+    margin: 0 2px;
+    background: #1B67E8;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.modules {
+    margin: 0 2px;
+    background: #00CF91;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.web-server {
+    margin: 0 2px;
+    background: #FFC11E;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.database {
+    margin: 0 2px;
+    background: #FF0000;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.ci-cd {
+    margin: 0 2px;
+    background: #940CFE;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.activeStatus {
+    background: linear-gradient(0.15turn, #0BA360, #3CBA92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.in-developStatus {
+    background: linear-gradient(0.15turn, #FF9415, #FFC709);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inactiveStatus {
+    background: linear-gradient(0.15turn, #EB1E80, #F42A5A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

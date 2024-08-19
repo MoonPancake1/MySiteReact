@@ -2,20 +2,15 @@ import React from 'react';
 import classes from "./ProjectContainer.module.css"
 import ProjectCard from "../project_card/ProjectCard";
 import {useNavigate} from "react-router-dom";
+import StatusCode from "../statusCode/StatusCode";
+import utils from "../../../utils/utils";
 
 const ProjectContainer = (props) => {
 
     const router = useNavigate();
 
-    let view;
+    let view = utils.getViews(props.project.view);
 
-    if (props.project.view < 10**3) {
-        view = props.project.view;
-    } else if (100 > props.project.view / 10**3 > 0){
-        view = `${Math.round(props.project.view / 10**3)} тыс`;
-    } else if (props.project.view / 10**6 > 0){
-        view = `${Math.round(props.project.view / 10**6)} млн`;
-    }
     return (
         <div className={classes.container}>
             <div className={classes.wrapperInfoCard}>
@@ -37,15 +32,7 @@ const ProjectContainer = (props) => {
                             ? `Оценок пока нет`
                             : `Рейтинг: ${props.project.rate}/10`}
                         </p>
-                        <div className={classes.wrapperStatusCode}>
-                            Статус:
-                            {props.project.status === 'active'
-                                ? <p className={classes.active}>работает</p>
-                                : props.project.status === 'in develop'
-                                    ? <p className={classes.develop}>в разработке</p>
-                                    : <p className={classes.inactive}>не работает</p>
-                            }
-                        </div>
+                        <StatusCode status={props.project.status} />
                     </div>
                     <button className={classes.moreInfoBtn} onClick={() => router(`project/${props.project.id}`)}>
                         <h1 className={classes.moreInfoText}>Подробнее</h1>
