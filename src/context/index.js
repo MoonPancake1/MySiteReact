@@ -1,4 +1,10 @@
 import {createContext} from 'react';
 
-export const AuthContext = createContext(null);
+
+export const AuthContext = createContext({
+    isAuthenticated: false,
+    setIsAuthenticated: null,
+    user: null,
+    setUser: null,
+});
 export const TitleContext = createContext(null);

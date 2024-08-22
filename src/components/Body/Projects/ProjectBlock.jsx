@@ -3,6 +3,7 @@ import classes from '../../../styles/Body/Projects/ProjectBlock.module.css'
 import SubTextProject from "../../UI/subTextProject/SubTextProject";
 import "../../../styles/Body/Projects/techSpans.css"
 import utils from "../../../utils/utils";
+import GradeScale from "../../UI/gradeScale/GradeScale";
 
 const ProjectBlock = (props) => {
 
@@ -58,14 +59,20 @@ const ProjectBlock = (props) => {
                         </p>
                     </div>
                     <div className={classes.containerButtonAction}>
-                        <button className={classes.buttonAction}>
-                            Перейти
-                        </button>
+                        <a href={props.project.project_link} target="_blank" rel="noreferrer"
+                        className={classes.linkAction}>
+                            <button className={classes.buttonAction}>
+                                Перейти
+                            </button>
+                        </a>
                     </div>
                     <div className={classes.containerSputnikEmoji}>
                         <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f6f0-fe0f.png" alt=""/>
                     </div>
                 </div>
+            </div>
+            <div className={classes.containerGrade}>
+                <GradeScale project_id={props.project_id}/>
             </div>
         </div>
     );

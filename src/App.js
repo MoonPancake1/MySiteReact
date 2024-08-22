@@ -14,10 +14,10 @@ function App() {
 
     return (
         <AuthContext.Provider value={{
-            isAuthenticated: isAuthenticated,
-            setIsAuthenticated: setIsAuthenticated,
-            user: user,
-            setUser: setUser,
+            isAuthenticated,
+            setIsAuthenticated,
+            user,
+            setUser,
         }}>
             <TitleContext.Provider value={{
                 title: title,

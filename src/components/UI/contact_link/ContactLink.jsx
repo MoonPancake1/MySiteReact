@@ -30,7 +30,9 @@ const ContactLink = (props) => {
         <a href={link} target="_blank" className={classes.contactLink} rel="noreferrer">
             <div className={classes.container}>
                 <img src={icon} alt="" className={classes.iconLink}/>
-                <h2>{props.link}</h2>
+                <h2 className={classes.h2Link}>
+                    {props.link}
+                </h2>
             </div>
         </a>
     );

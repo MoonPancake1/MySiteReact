@@ -75,7 +75,11 @@
     margin-top: 50px;
 }
 
-.buttonAction{
+.linkAction {
+    width: 70%;
+}
+
+.buttonAction {
     font-family: Montserrat, serif ;
     font-size: 25px;
     font-weight: bold;
@@ -83,12 +87,34 @@
     border: none;
     border-radius: 10px;
     background: linear-gradient(0.15turn, #1FA5FF, #1053FF);
-    width: 70%;
+    width: 100%;
     height: 50px;
+    transition: all 100ms ease-in-out;
+}
+
+.buttonAction:hover {
+    transform: scale(1.1);
 }
 
 .containerSputnikEmoji {
     display: flex;
     justify-content: end;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .containerSputnikEmoji {
+      height: 0;
+      width: 0;
+      overflow: hidden;
+  }
+}
+
+.containerGrade {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

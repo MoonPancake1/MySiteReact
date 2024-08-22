@@ -31,3 +31,11 @@
     height: 125px;
     width: 125px;
 }
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}

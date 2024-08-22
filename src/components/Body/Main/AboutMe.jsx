@@ -11,24 +11,28 @@ const AboutMe = () => {
                     <h2 className={classes.textSubMain}>Чернышев Владислав:</h2>
                     <div>
                     <span className={classes.spanP}>
-                        <p className={classes.textSubLi}>• Студент СПбПУ</p>
-                        <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f393.png" alt=""
-                             className={classes.subLiStiker}/>
+                        <p className={classes.textSubLi}>• Студент СПбПУ
+                            <img
+                            src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f393.png" alt=""
+                            className={classes.subLiStiker}/></p>
                     </span>
                         <span className={classes.spanP}>
-                        <p className={classes.textSubLi}>• FullStack-разработчик</p>
-                        <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f468-200d-1f4bb.png" alt=""
-                             className={classes.subLiStiker}/>
+                        <p className={classes.textSubLi}>• FullStack-разработчик
+                            <img
+                            src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f468-200d-1f4bb.png" alt=""
+                            className={classes.subLiStiker}/></p>
                     </span>
                         <span className={classes.spanP}>
-                        <p className={classes.textSubLi}>• DevOps-инженер</p>
-                        <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f517.png" alt=""
-                            className={classes.subLiStiker}/>
+                        <p className={classes.textSubLi}>• DevOps-инженер <img
+                            src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f517.png" alt=""
+                            className={classes.subLiStiker}/></p>
+
                     </span>
                         <span className={classes.spanP}>
-                        <p className={classes.textSubLi}>• Project-менеджер</p>
-                        <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f4bc.png" alt=""
-                             className={classes.subLiStiker}/>
+                        <p className={classes.textSubLi}>• Project-менеджер <img
+                            src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f4bc.png" alt=""
+                             className={classes.subLiStiker}/></p>
+
                     </span>
                     </div>
                 </div>
@@ -39,7 +43,8 @@ const AboutMe = () => {
             <div className={classes.stikers}>
                 <div style={{gridColumn: "1/9"}}>
                     <div className={classes.stiker1}>
-                        <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f3c6.png" alt=""/>
+                        <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f3c6.png" alt=""
+                        className={classes.stiker1Img}/>
                     </div>
                 </div>
                 <div style={{gridColumn: "9/10"}}>

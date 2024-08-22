@@ -1,16 +1,13 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import ProjectBlock from "../../components/Body/Projects/ProjectBlock";
-import {TitleContext} from "../../context";
 import {useParams} from "react-router-dom";
 import {useFetching} from "../../components/hooks/useFetching";
 import ProjectService from "../../Api/ProjectService";
 import Loader from "../../components/UI/loader/Loader";
 
 const Project = () => {
-
-    const {title, setTitle} = useContext(TitleContext);
 
     const params = useParams();
 
@@ -23,6 +20,7 @@ const Project = () => {
 
     useEffect(() => {
         fetchProject();
+        // eslint-disable-next-line
     }, []);
 
     return (
@@ -31,7 +29,7 @@ const Project = () => {
                 ?   <Loader />
                 :   <div>
                         <Header title={"Страница проекта"} />
-                        <ProjectBlock fetchProject={fetchProject} project={project} projectError={projectError} />
+                        <ProjectBlock project_id={params.id} fetchProject={fetchProject} project={project} projectError={projectError} />
                         <Footer />
                     </div>
             }

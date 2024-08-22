@@ -1,0 +1,16 @@
+.btnGrade {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Montserrat, serif;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background: linear-gradient(0.15turn, #20E4A4, #2CC9CC);
+    color: #FFFFFF;
+    border: none;
+    transition: all 100ms ease-in-out;
+}
+
+.btnGrade:hover {
+    transform: scale(1.1);
+}

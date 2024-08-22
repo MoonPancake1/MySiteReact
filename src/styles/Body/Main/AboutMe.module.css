@@ -74,6 +74,9 @@
     transform: rotate(15deg);
 }
 
+.stiker1Img {
+}
+
 .stiker2 {
     font-size: 80px;
     transform: rotate(-15deg);
@@ -82,4 +85,52 @@
 .stiker2Img {
     height: 80px;
     width: 80px;
+}
+
+@media screen and (max-width: 450px) {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .mainPart {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .textSubMain {
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 35px;
+    }
+    .textSubLi {
+        padding-left: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .me {
+        width: 300px;
+        height: 400px;
+        margin-top: 25px;
+    }
+
+    .stikers {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .stiker1 {
+        font-size: 20px;
+    }
+
+    .stiker1Img {
+        height: 80px;
+        width: 80px;
+    }
 }

@@ -36,3 +36,19 @@
     transform: scaleX(0); /* Исходное состояние - скрыто */
     transition: transform 0.2s; /* Плавный переход для нижнего подчёркивания */
 }
+
+
+@media screen and (max-width: 450px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .h2Link {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
