@@ -73,8 +73,17 @@
 }
 
 @media screen and (max-width: 450px) {
+    .containerProject{
+        grid-auto-rows: minmax(650px, 1fr);
+        gap: 0;
+    }
+
     .wrapperContainer {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .wrapperAddBtn {
+        margin-bottom: 75px;
     }
 }

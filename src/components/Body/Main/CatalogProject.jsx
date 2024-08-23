@@ -86,12 +86,12 @@ const CatalogProject = () => {
                             <Loader />
                         </div>
                     :   <div>
-                            <div className={classes.wrapperAddBtn}>
-                                {projects.length === 0
-                                    ? <h1>Ничего не найдено!</h1>
-                                    : <></>
-                                }
-                            </div>
+                            {projects.length === 0
+                                ?   <div className={classes.wrapperAddBtn}>
+                                        <h1>Ничего не найдено!</h1>
+                                    </div>
+                                : <></>
+                            }
                             <div className={classes.containerProject}>
                                 {projects.map((project) => (
                                     <ProjectContainer project={project} key={project.id}/>
