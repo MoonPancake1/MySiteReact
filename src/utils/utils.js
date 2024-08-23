@@ -42,4 +42,37 @@ export default class utils {
         return `${day} ${month} ${year}`;
 
     }
+
+    static sortProject(projects, title, stack, sort) {
+        const regSearchTitle = new RegExp(`${title.toLowerCase()}`);
+        const listStack = []
+        for (const tech in stack) {
+             listStack.push(stack[tech].toLowerCase());
+        }
+        let newProjects = projects.filter(project =>
+            regSearchTitle.test(project.title.toLowerCase())
+        );
+        newProjects = newProjects.filter(project =>
+            this.checkStack(project.stack, listStack) === true
+        );
+        return newProjects
+    }
+
+    static checkStack(projectStack, sortStack) {
+        const listProjectStack = []
+        for (const cat in projectStack) {
+            for (const tech in projectStack[cat]) {
+                const techStr = projectStack[cat][tech].toLowerCase()
+                if (techStr !== "none")
+                    {
+                        listProjectStack.push(techStr);
+                    }
+            }
+        }
+
+        const regSortStack = new RegExp(sortStack.join(""));
+        const strProjectStack = listProjectStack.join("");
+
+        return regSortStack.test(strProjectStack);
+    }
 }

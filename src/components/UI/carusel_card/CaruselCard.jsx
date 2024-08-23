@@ -3,8 +3,6 @@ import classes from "./CaruselCard.module.css";
 
 const CaruselCard = (props) => {
 
-    let container = '';
-
     return (
         <div className={classes.container}>
             <img className={classes.imageCarusel} key={props.index} src={props.data.image} alt={`image-${props.index}`}/>

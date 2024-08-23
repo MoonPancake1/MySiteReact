@@ -16,9 +16,6 @@ const Body = () => {
             <div className={classes.carusel}>
                 <CaruselBlock/>
             </div>
-            <div className={classes.filter}>
-                <FilterProject/>
-            </div>
             <div className={classes.catalogProject}>
                 <CatalogProject/>
             </div>
