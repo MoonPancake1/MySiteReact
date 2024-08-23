@@ -20,6 +20,7 @@
 .wrapperContainer {
     margin-left: 50px;
     margin-right: 50px;
+    height: 100%;
 }
 
 .containerProject{
@@ -31,6 +32,7 @@
 
 .wrapperLoader{
     width: 100%;
+    height: 720px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +43,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.wrapperAddBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moreAddBtn {
+    width: 350px;
+    height: 60px;
+    background: linear-gradient(0.15turn, #04CE9B, #64E408);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+}
+
+.moreAddBtn:hover {
+    transform: scale(1.1);
+}
+
+.moreAddText {
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
 }
 
 @media screen and (max-width: 450px) {

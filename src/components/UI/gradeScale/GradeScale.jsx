@@ -20,7 +20,7 @@ const GradeScale = (props) => {
         async () => {
             // const access_token = localStorage.getItem("access_token");
             // const access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiOTE0ZjU2ZDQtYjYxNi00YjZmLTg3MTAtOWY5ZWI3MWRlMTYyIiwiZXhwIjoxNzI0MzUwNjYzfQ.XQ6FfcvYoIVbgaL8f3ov9v2a72g8R1xTPKUAsR1qwd4"
-            if (auth.user.access_token) {
+            if (auth.user) {
                 const grade = await ProjectService.checkSelectGrade(auth.user.access_token, props.project_id);
                 setGrade(grade);
             } else {

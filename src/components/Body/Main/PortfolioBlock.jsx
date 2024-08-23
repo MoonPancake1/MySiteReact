@@ -17,7 +17,9 @@ const PortfolioBlock = () => {
     )
 
     useEffect(() => {
+        // eslint-disable-next-line
         fetchAchievements();
+        // eslint-disable-next-line
     }, []);
 
     // A (Распространённое)

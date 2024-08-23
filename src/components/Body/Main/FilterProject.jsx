@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from "../../../styles/Body/Main/FilterProject.module.css";
 import InputBox from "../../UI/input_box/InputBox";
-import ButtonSearch from "../../UI/buttonSearch/ButtonSearch";
 
 
 const FilterProject = (props) => {
@@ -32,9 +31,6 @@ const FilterProject = (props) => {
                               onChange={(e) => props.changeProjectSort(e.target.value)}
                               img={"https://emoji.aranja.com/static/emoji-data/img-apple-160/1f4c8.png"}
                     />
-                </div>
-                <div className={classes.wrapperButtonSearch}>
-                    <ButtonSearch/>
                 </div>
             </div>
         </div>

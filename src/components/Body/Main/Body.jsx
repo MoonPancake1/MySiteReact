@@ -1,7 +1,6 @@
 import classes from "../../../styles/Body/Main/Body.module.css";
 import AboutMe from "./AboutMe";
 import CaruselBlock from "./CaruselBlock";
-import FilterProject from "./FilterProject";
 import CatalogProject from "./CatalogProject";
 import PortfolioBlock from "./PortfolioBlock";
 import ContactBlock from "./ContactBlock";

@@ -11,15 +11,18 @@ const CatalogProject = () => {
 
     const [allProjects, setAllProjects] = useState([]);
     const [projects, setProjects] = useState([]);
+    const [viewProject, setViewProject] = useState(3);
     const [fetchProjects, isLoading, projectError] = useFetching(
         async () => {
             const projects = await ProjectService.getAll();
             setAllProjects(projects);
-            setProjects(projects);
+            setProjects(projects.slice(0, viewProject));
     })
 
     useEffect(() => {
+        // eslint-disable-next-line
         fetchProjects();
+        // eslint-disable-next-line
     }, []);
 
     const [projectName, setProjectName] = useState("");
@@ -28,8 +31,10 @@ const CatalogProject = () => {
 
     useEffect(() => {
         const replaceProjectStack = projectStack.split(" ");
-        setProjects(utils.sortProject(allProjects, projectName, replaceProjectStack, projectSort));
-    }, [projectName, projectStack, projectSort]);
+        setProjects(utils.sortProject(
+            allProjects, projectName, replaceProjectStack, projectSort
+        ).slice(0, viewProject));
+    }, [projectName, projectStack, projectSort, viewProject, allProjects]);
 
 
     function changeProjectName(name) {
@@ -63,13 +68,31 @@ const CatalogProject = () => {
                     ?   <div className={classes.wrapperLoader}>
                             <Loader />
                         </div>
-                    :   <div className={classes.containerProject}>
-                            {projects.map((project) => (
-                                <ProjectContainer project={project} key={project.id}/>
-                            ))}
-                        </div>
+                    :   <div>
+                            <div className={classes.wrapperAddBtn}>
+                                {projects.length === 0
+                                    ? <h1>Ничего не найдено!</h1>
+                                    : <></>
+                                }
+                            </div>
+                            <div className={classes.containerProject}>
+                                {projects.map((project) => (
+                                    <ProjectContainer project={project} key={project.id}/>
+                                ))}
+                            </div>
+                            {viewProject < allProjects.length && projects.length > 0
+                            ?   <div className={classes.wrapperAddBtn}>
+                                    <button className={classes.moreAddBtn}
+                                            onClick={() => setViewProject(viewProject + 3)}>
+                                        <h1 className={classes.moreAddText}>
+                                            Загрузить ещё
+                                        </h1>
+                                    </button>
+                                </div>
+                            :   <></>
+                            }
+                    </div>
                 }
-
             </div>
         </div>
     )

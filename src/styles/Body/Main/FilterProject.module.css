@@ -34,11 +34,6 @@
     grid-column: 7/10;
 }
 
-.wrapperButtonSearch {
-    display: flex;
-    grid-column: 10/11;
-}
-
 @media screen and (max-width: 700px) {
     .containerInput {
         display: flex;
