@@ -12,16 +12,25 @@ const CatalogProject = () => {
     const [allProjects, setAllProjects] = useState([]);
     const [projects, setProjects] = useState([]);
     const [viewProject, setViewProject] = useState(3);
+    const [techs, setTechs] = useState([null]);
+    const [fetchTech, techIsLoading, techError] = useFetching(
+        async () => {
+            let techs = await ProjectService.getAllTechs();
+            techs = techs.filter(tech => tech !== "none")
+            setTechs(techs);
+        });
     const [fetchProjects, isLoading, projectError] = useFetching(
         async () => {
             const projects = await ProjectService.getAll();
             setAllProjects(projects);
             setProjects(projects.slice(0, viewProject));
-    })
+        });
 
     useEffect(() => {
         // eslint-disable-next-line
         fetchProjects();
+        // eslint-disable-next-line
+        fetchTech();
         // eslint-disable-next-line
     }, []);
 
@@ -35,6 +44,13 @@ const CatalogProject = () => {
             allProjects, projectName, replaceProjectStack, projectSort
         ).slice(0, viewProject));
     }, [projectName, projectStack, projectSort, viewProject, allProjects]);
+
+    useEffect(() => {
+        if (!(projectName || projectStack.length > 0 || projectSort)) {
+            setViewProject(3)
+        }
+
+    }, [projectName, projectStack, projectSort])
 
 
     function changeProjectName(name) {
@@ -54,7 +70,8 @@ const CatalogProject = () => {
         <div className={classes.container}>
             <FilterProject changeProjectName={changeProjectName} projectName={projectName}
             changeProjectStack={changeProjectStack} projectStack={projectStack}
-            changeProjectSort={changeProjectSort} projectSort={projectSort} />
+            changeProjectSort={changeProjectSort} projectSort={projectSort}
+            techs={techs} techIsLoading={techIsLoading} techError={techError} />
             <div className={classes.wrapperTitleBlock}>
                 <h1 className={classes.TitleBlock}>Каталог проектов</h1>
             </div>

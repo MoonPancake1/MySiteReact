@@ -13,6 +13,11 @@ export default class ProjectService {
         return resp.data;
     }
 
+    static async getAllTechs(){
+        const resp = await axios.get(`https://id.vchern.me/main/projects/all_tech/`);
+        return resp.data;
+    }
+
     // COMMENTS
     static async getCommentsForProject(project_id){
         const resp = await axios.get(`https://id.vchern.me/main/comments/${project_id}/`)
