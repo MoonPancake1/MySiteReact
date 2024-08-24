@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import classes from "./AvatarPrev.module.css";
-import ColorThief from "colorthief";
 import utils from "../../../utils/utils";
 
 const AvatarPrev = (props) => {
@@ -8,13 +7,11 @@ const AvatarPrev = (props) => {
     const [colorBorder, setColorBorder] = useState([0, 0, 0]);
     const [colorBackground, setColorBackground] = useState([0, 0, 0, 10]);
 
-    const colorThief = new ColorThief();
-
     const img = new Image( 175, 175);
     img.src = props.imgLink
 
     useEffect(() => {
-        const rgbObj = colorThief.getColor(img)
+        const rgbObj = props.colorThief.getColor(img)
         let colorBorder = utils.rgbToHex(rgbObj[0], rgbObj[1], rgbObj[2]);
         colorBorder = `${props.borderSize} solid ${colorBorder}`
         const colorBackground = `rgba(${rgbObj[0]}, ${rgbObj[1]}, ${rgbObj[2]}, 0.1)`;

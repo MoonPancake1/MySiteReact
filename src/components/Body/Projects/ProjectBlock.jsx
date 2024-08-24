@@ -4,7 +4,7 @@ import SubTextProject from "../../UI/subTextProject/SubTextProject";
 import "../../../styles/Body/Projects/techSpans.css"
 import utils from "../../../utils/utils";
 import GradeScale from "../../UI/gradeScale/GradeScale";
-import CommentsBlock from "../../UI/commentsList/CommentsBlock";
+import CommentsBlock from "../../UI/commentsBlock/CommentsBlock";
 
 const ProjectBlock = (props) => {
 
