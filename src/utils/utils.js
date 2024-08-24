@@ -126,4 +126,17 @@ export default class utils {
     static rgbToHex(r, g, b) {
         return "#" + this.componentToHex(r) + this.componentToHex(g) + this.componentToHex(b);
     }
+
+    static checkNeedZeroInTime(time){
+        if (time >= 10) {
+            return time;
+        }
+        return `0${time}`;
+    }
+
+    static getFormattedCommentInfo(username, date) {
+        const dateFormatted = new Date(date);
+        return `${username} оставил комментарий ${this.getFormattedDate(dateFormatted)} в 
+${this.checkNeedZeroInTime(dateFormatted.getHours())}:${this.checkNeedZeroInTime(dateFormatted.getMinutes())}`;
+    }
 }

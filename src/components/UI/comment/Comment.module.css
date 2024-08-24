@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.wrapperAvatarPrev {
+    width: 48px;
+    height: 48px;
+}
+
+.wrapperCommentText {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperPixelPerfect {
+    width: 51px;
+    height: 51px;
+}
+
+.wrapperCommentCreateInfo {
+    width: 100%;
+    display: flex;
+    text-align: start;
+    margin-left: 2px;
+}
+
+.CommentCreateInfo {
+    color: #939598;
+    margin: 0 0 5px 0;
+}
+
+.containerCommentText {
+    width: 100%;
+    display: flex;
+    text-align: start;
+    margin-left: 2px;
+}
+
+.userComment {
+    margin: 0;
+    font-size: 18px;
+    font-family: Montserrat, serif;
+    font-weight: 400;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 100%;
+}
