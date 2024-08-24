@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginBtn from "../UI/auth_btn/LoginBtn";
 import classes from '../../styles/Header/Header.module.css';
-import logo from '../../images/vChernLogo.png';
+import logo from '../../images/logo256x256.png';
 import {Link} from "react-router-dom";
 
 
@@ -9,9 +9,9 @@ const Header = (props) => {
     return (
         <header>
             <div className={classes.wrapper}>
-                <div className={classes.logo}>
+                <div className={classes.wrapperLogo}>
                     <Link to={"/"}>
-                        <img src={logo} width={"50px"} height={"50px"} alt=""/>
+                        <img src={logo} className={classes.logo} alt=""/>
                     </Link>
                 </div>
                 <div className={classes.titleHeader}>

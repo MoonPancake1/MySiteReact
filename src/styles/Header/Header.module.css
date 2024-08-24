@@ -4,11 +4,16 @@
     height: 100px;
 }
 
-.logo {
+.wrapperLogo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 20%;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
 }
 
 .titleHeader {
