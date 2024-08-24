@@ -1,0 +1,36 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox {
+    height: 85%;
+    width: 97%;
+    padding: 0;
+    margin: 4px;
+    outline: 0;
+    resize: none;
+    overflow: hidden;
+    border-width: 0;
+    font-family: Montserrat, serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/*.inputBox {*/
+/*    width: 100%;*/
+/*    margin-bottom:40px;*/
+/*    padding: 0;*/
+/*    outline: 0;*/
+/*    line-height: 40px;*/
+/*    !*background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;*!*/
+/*    background-size: 8px 40px;*/
+/*    letter-spacing: 0.2em;*/
+/*    background-attachment: local;*/
+/*    background-repeat: repeat;*/
+/*    border-width: 0;*/
+/*    resize: none;*/
+/*}*/

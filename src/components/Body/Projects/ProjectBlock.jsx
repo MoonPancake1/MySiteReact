@@ -4,6 +4,7 @@ import SubTextProject from "../../UI/subTextProject/SubTextProject";
 import "../../../styles/Body/Projects/techSpans.css"
 import utils from "../../../utils/utils";
 import GradeScale from "../../UI/gradeScale/GradeScale";
+import CommentsBlock from "../../UI/commentsList/CommentsBlock";
 
 const ProjectBlock = (props) => {
 
@@ -60,7 +61,7 @@ const ProjectBlock = (props) => {
                     </div>
                     <div className={classes.containerButtonAction}>
                         <a href={props.project.project_link} target="_blank" rel="noreferrer"
-                        className={classes.linkAction}>
+                           className={classes.linkAction}>
                             <button className={classes.buttonAction}>
                                 Перейти
                             </button>
@@ -73,6 +74,9 @@ const ProjectBlock = (props) => {
             </div>
             <div className={classes.containerGrade}>
                 <GradeScale project_id={props.project_id}/>
+            </div>
+            <div className={classes.containerCommentsList}>
+                <CommentsBlock project_id={props.project_id}/>
             </div>
         </div>
     );

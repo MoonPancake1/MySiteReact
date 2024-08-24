@@ -117,4 +117,13 @@ export default class utils {
         }
         return projects
     }
+
+    static componentToHex(c) {
+        const hex = c.toString(16);
+        return hex.length === 1 ? "0" + hex : hex;
+    }
+
+    static rgbToHex(r, g, b) {
+        return "#" + this.componentToHex(r) + this.componentToHex(g) + this.componentToHex(b);
+    }
 }

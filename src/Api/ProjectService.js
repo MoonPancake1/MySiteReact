@@ -24,6 +24,25 @@ export default class ProjectService {
         return resp.data;
     }
 
+    static async createComment(token, project_id, comment){
+        const resp = await axios.post(`https://id.vchern.me/main/comments/`,
+            {
+                project_id: project_id,
+                comment: comment,
+            },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
+                }
+            }
+        )
+
+        console.log(resp.data);
+
+        return resp.data;
+    }
+
     // GRADES
     static async createGrade(token, project_id, grade) {
         const resp = await axios.post(`https://id.vchern.me/main/grade/`,

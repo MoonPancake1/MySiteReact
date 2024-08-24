@@ -101,6 +101,20 @@
     margin-top: 50px;
 }
 
+.containerGrade {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerCommentsList {
+    display: block;
+    width: 100%;
+}
+
 @media screen and (max-width: 700px) {
     .containerSputnikEmoji {
         height: 0;
@@ -112,13 +126,4 @@
         margin-bottom: 0;
         margin-top: 40px;
     }
-}
-
-.containerGrade {
-    width: 100%;
-    margin-top: 25px;
-    margin-bottom: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

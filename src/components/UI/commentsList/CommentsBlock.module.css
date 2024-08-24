@@ -1,0 +1,37 @@
+.container {
+
+}
+
+.wrapperTextTitle {
+
+}
+
+.textTitle {
+
+}
+
+.containerCommentBlock {
+
+}
+
+.containerCommentCreate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.containerCommentList {
+
+}
+
+.textErrorAuthForCreateComment {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 700px) {
+    .textErrorAuthForCreateComment {
+        font-size: 20px;
+    }
+}
