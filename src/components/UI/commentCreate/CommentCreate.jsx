@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classes from './CommentCreate.module.css';
 import AvatarPrev from "../avatarPrev/AvatarPrev";
-import testAvatar from "../../../images/avatar.png";
 import CommentInput from "../commentInput/CommentInput";
 import SubmitSendBtn from "../submitSendBtn/SubmitSendBtn";
+import {AuthContext} from "../../../context";
 
 const CommentCreate = (props) => {
+
+    const auth = useContext(AuthContext)
 
     return (
         <div className={classes.container}>
             <div className={classes.wrapperAvatarPrev}>
-                <AvatarPrev imgLink={testAvatar} borderSize={"2px"}
+                <AvatarPrev imgLink={auth.user.avatar} borderSize={"2px"}
                             borderRadius={"10px"} colorThief={props.colorThief}/>
             </div>
             <div className={classes.wrapperInputBox}>

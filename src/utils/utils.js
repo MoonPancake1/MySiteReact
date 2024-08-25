@@ -136,7 +136,11 @@ export default class utils {
 
     static getFormattedCommentInfo(username, date) {
         const dateFormatted = new Date(date);
-        return `${username} оставил комментарий ${this.getFormattedDate(dateFormatted)} в 
+        if (username === "Твой"){
+            return `Твой комментарий от ${this.getFormattedDate(dateFormatted)} в 
+${this.checkNeedZeroInTime(dateFormatted.getHours())}:${this.checkNeedZeroInTime(dateFormatted.getMinutes())}`;
+        }
+        return `Пользователь ${username} оставил комментарий ${this.getFormattedDate(dateFormatted)} в 
 ${this.checkNeedZeroInTime(dateFormatted.getHours())}:${this.checkNeedZeroInTime(dateFormatted.getMinutes())}`;
     }
 }
