@@ -6,6 +6,7 @@ import DataList from "../../UI/dataList/DataList";
 
 const FilterProject = (props) => {
 
+    // TODO: переделать "Сортировку" с input на checkbox
     const sortList = ['Сначала новые',
     'Сначала старые', 'По названию', 'По просмотрам', 'По рейтингу',
     'Рабочие проекты', 'В разаработке', 'Не рабочие проекты'];

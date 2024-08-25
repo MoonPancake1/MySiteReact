@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './CommentsList.module.css';
 import Comment from "../../../UI/comment/Comment";
-import {useFetching} from "../../../hooks/useFetching";
-import ProjectService from "../../../../Api/ProjectService";
+
 
 const CommentsList = (props) => {
 

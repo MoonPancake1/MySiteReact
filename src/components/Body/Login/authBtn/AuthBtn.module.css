@@ -1,0 +1,16 @@
+.btnAuth {
+    background: black;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Montserrat, serif;
+    padding: 20px 30px;
+    border-radius: 20px;
+    transition: all 100ms ease-in-out;
+}
+
+.btnAuth:hover {
+    transform: scale(1.05);
+}
