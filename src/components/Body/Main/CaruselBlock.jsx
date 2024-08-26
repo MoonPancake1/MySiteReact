@@ -1,6 +1,9 @@
 import React from 'react';
 import classes from "../../../styles/Body/Main/CaruselBlock.module.css";
 import Carusel from '../../UI/carusel/Carusel'
+import imgSPbPU from '../../../images/projectImages/spbpu_1.webp'
+import imgFullStack from '../../../images/projectImages/fullStack_1.webp'
+import imgPolyglot from '../../../images/projectImages/polyglot_1.webp'
 
 
 const CaruselBlock = () => {
@@ -9,17 +12,17 @@ const CaruselBlock = () => {
         {
             'title': 'Студент СПбПУ',
             'description': 'Обучаюсь на специальности "Инноватика" с 2023 по 2027',
-            'image': 'https://i.pinimg.com/564x/2b/c7/77/2bc7771c0457d542cea5a7574e75c395.jpg',
+            'image': imgSPbPU,
         },
         {
             'title': 'FullStack-разработчик',
             'description': 'Занимаюсь разработкой веб-приложений с 2022 года',
-            'image': 'https://i.pinimg.com/564x/07/21/1b/07211b078ab5e9f537a3daeccef72279.jpg',
+            'image': imgFullStack,
         },
         {
             'title': 'Полиглот',
             'description': 'Знаком с 5 языками программирования',
-            'image': 'https://i.pinimg.com/564x/d4/42/9e/d4429e833937f4733fa37d8e86b3675f.jpg',
+            'image': imgPolyglot,
         }
     ]
 

@@ -18,7 +18,7 @@ const Carusel = (props) => {
 
     return (
         <div className="carousel">
-            <button onClick={prevSlide} className="carousel-button prv">
+            <button onClick={prevSlide} className="carousel-button prv" aria-label={"Прошлый слайд"}>
                 <img src={btnNextPrev} alt="" className="btn-prev"/>
             </button>
             <div className="slides">
@@ -42,7 +42,7 @@ const Carusel = (props) => {
                     );
                 })}
             </div>
-            <button onClick={nextSlide} className="carousel-button nxt">
+            <button onClick={nextSlide} className="carousel-button nxt" aria-label={"Следующий слайд"}>
                 <img src={btnNextPrev} alt="" className="btn-next"/>
             </button>
         </div>

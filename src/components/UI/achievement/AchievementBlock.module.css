@@ -24,6 +24,9 @@
     display: flex;
     justify-content: flex-start;
     text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Montserrat, serif;
 }
 
 .btnAch {

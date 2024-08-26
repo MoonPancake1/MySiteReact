@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "../../../styles/Body/Main/AboutMe.module.css";
-import me from "../../../images/me.jpg";
+import me from "../../../images/me.webp";
 
 const AboutMe = () => {
     return (

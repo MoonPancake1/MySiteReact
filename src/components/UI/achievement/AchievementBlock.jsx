@@ -20,10 +20,10 @@ const AchievementBlock = (props) => {
                             onClick={openLink.bind(null, achievement['link'])}>
                         <span className={classes.spanAch}>
                             <div className={achievement['rate']}>
-                                <h3 className={classes.textAch}>
+                                <p className={classes.textAch}>
                                     • (Ранг: {achievement.rate}) {achievement.type}: "
                                     {achievement.course}", {achievement.company}
-                                </h3>
+                                </p>
                             </div>
                         </span>
                     </button>

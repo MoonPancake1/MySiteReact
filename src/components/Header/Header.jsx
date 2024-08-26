@@ -10,7 +10,7 @@ const Header = (props) => {
         <header>
             <div className={classes.wrapper}>
                 <div className={classes.wrapperLogo}>
-                    <Link to={"/"}>
+                    <Link to={"/"} aria-label={"Главная страница"} role={"button"}>
                         <img src={logo} className={classes.logo} alt=""/>
                     </Link>
                 </div>
