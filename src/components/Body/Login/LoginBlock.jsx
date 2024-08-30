@@ -8,13 +8,14 @@ const LoginBlock = () => {
     const [modalInfoIsOpen, setModalInfoIsOpen] = useState(false);
 
     function redirectToAuth() {
-        setModalInfoIsOpen(true)
+        // setModalInfoIsOpen(true)
+        window.location.replace("http://id.vchern.me/id/login/");
     }
 
     return (
         <div className={classes.container}>
-            <Modal isOpen={modalInfoIsOpen} onClose={()=> setModalInfoIsOpen(false)}
-            title={"Упс..."} msg={"Данная возможность будет доступна только с 1 сентября 🥳"}/>
+            {/*<Modal isOpen={modalInfoIsOpen} onClose={()=> setModalInfoIsOpen(false)}*/}
+            {/*title={"Упс..."} msg={"Данная возможность будет доступна только с 1 сентября 🥳"}/>*/}
             <div className={classes.containerAuthBtn}>
                 <AuthBtn onClick={redirectToAuth}/>
             </div>

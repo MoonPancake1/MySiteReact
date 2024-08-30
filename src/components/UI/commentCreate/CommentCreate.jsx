@@ -7,12 +7,10 @@ import {AuthContext} from "../../../context";
 
 const CommentCreate = (props) => {
 
-    const auth = useContext(AuthContext)
-
     return (
         <div className={classes.container}>
             <div className={classes.wrapperAvatarPrev}>
-                <AvatarPrev imgLink={auth.user.avatar} borderSize={"2px"}
+                <AvatarPrev imgLink={props.auth.user.avatar} borderSize={"2px"}
                             borderRadius={"10px"} colorThief={props.colorThief}/>
             </div>
             <div className={classes.wrapperInputBox}>

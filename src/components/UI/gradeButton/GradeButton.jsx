@@ -9,7 +9,7 @@ const GradeButton = (props) => {
 
     async function selectGrade () {
         if (props.canSelectGrade()) {
-            await ProjectService.createGrade(props.user.access_token,
+            await ProjectService.createGrade(props.auth.accessToken,
                 params.id, props.grade);
         }
     }
