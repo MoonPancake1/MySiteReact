@@ -9,4 +9,5 @@
 .imgAvatar {
     width: 85%;
     height: 85%;
+    border-radius: 100%;
 }
