@@ -23,6 +23,7 @@ const Comment = (props) => {
     // TODO: доделать кнопки "Изменить" и "Удалить"
     // TODO: время необходимо изменять на местное время пользователя
     function checkOwnerComment(user_uuid) {
+        console.log(auth.user.uuid, commentUser)
         if (auth.isAuthenticated){
             if (auth.user.uuid === user_uuid) {
                 return true;
@@ -49,7 +50,7 @@ const Comment = (props) => {
                     <div className={classes.wrapperCommentText}>
                         <div className={classes.wrapperCommentCreateInfo}>
                             <p className={classes.CommentCreateInfo}>
-                                {checkOwnerComment(commentUser.user_uuid)
+                                {checkOwnerComment(commentUser.uuid)
                                     ?   <>
                                             {utils.getFormattedCommentInfo("Твой", props.comment.created_at)}
                                         </>
@@ -64,7 +65,7 @@ const Comment = (props) => {
                                 {props.comment.comment}
                             </pre>
                         </div>
-                        {checkOwnerComment(commentUser.user_uuid)
+                        {checkOwnerComment(commentUser.uuid)
                             ?   <div className={classes.wrapperButtonsEditComment}>
                                     <button className={classes.btnEdit}>
                                         Изменить

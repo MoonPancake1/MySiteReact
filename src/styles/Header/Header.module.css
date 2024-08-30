@@ -38,6 +38,12 @@
     width: 15%;
 }
 
+.containerAvatar {
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+}
+
 @media screen and (max-width: 450px) {
     .mainText {
         font-size: 24px;
@@ -46,10 +52,6 @@
     .wrapperLogo {
         width: auto;
         margin-left: 10px;
-    }
-
-    .titleHeader {
-        width: 60%;
     }
 
     .auth {

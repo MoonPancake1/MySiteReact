@@ -18,13 +18,14 @@ const GradeScale = (props) => {
     // eslint-disable-next-line
     const [fetchGrade, isLoading, gradeError] = useFetching(
         async () => {
-            if (auth.user) {
+            if (auth.isAuthenticated) {
                 const grade = await ProjectService.checkSelectGrade(auth.accessToken, props.project_id);
-                setGrade(grade);
+                if (!grade.detail) {
+                    setGrade(grade);
+                }
             } else {
                 setGrade(null);
             }
-
     })
 
     useEffect(() => {
@@ -34,7 +35,7 @@ const GradeScale = (props) => {
     }, []);
 
     function checkCanSelectGrade(){
-        if (auth.user) {
+        if (auth.isAuthenticated) {
             return true
         }
         setModalInfoIsOpen(true);
@@ -54,16 +55,16 @@ const GradeScale = (props) => {
             </div>
             {isLoading
                 ? <Loader/>
-                : grade
-                    ? <h1>Вы уже оценили этот проект на {grade.grade} баллов 😉</h1>
-                    : <div className={classes.container}>
-                        <div className={classes.wrapperGradesScale}>
-                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((grade) => (
-                                <GradeButton grade={grade} key={grade} canSelectGrade={checkCanSelectGrade}
-                                auth={auth}/>
-                            ))}
+                : grade === null
+                    ?   <div className={classes.container}>
+                            <div className={classes.wrapperGradesScale}>
+                                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((grade) => (
+                                    <GradeButton grade={grade} key={grade} canSelectGrade={checkCanSelectGrade}
+                                                 auth={auth}/>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    :   <h1>Вы уже оценили этот проект на {grade.grade} баллов 😉</h1>
             }
         </div>
     );

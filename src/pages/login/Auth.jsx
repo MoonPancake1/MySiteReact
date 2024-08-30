@@ -23,7 +23,9 @@ const Auth = () => {
                 const userData = await userObj.getUserData();
                 setUserData(userData);
                 auth.setIsAuthenticated(true)
-                auth.setUser(userObj)
+                auth.setUser(userData)
+                auth.setRefreshToken(refresh_token)
+                auth.setAccessToken(access_token);
                 localStorage.setItem("userTokens", JSON.stringify(userObj))
             } catch (e) {
                 console.error(e);
