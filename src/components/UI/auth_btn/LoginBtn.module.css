@@ -37,3 +37,9 @@ a {
     height: 20px;
     margin-right: 5px;
 }
+
+@media screen and (max-width: 450px) {
+    .buttonAuth:hover::after {
+        transform: scaleX(0.9); /* Показать нижнее подчёркивание при наведении */
+    }
+}
