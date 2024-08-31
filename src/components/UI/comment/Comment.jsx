@@ -23,7 +23,6 @@ const Comment = (props) => {
     // TODO: доделать кнопки "Изменить" и "Удалить"
     // TODO: время необходимо изменять на местное время пользователя
     function checkOwnerComment(user_uuid) {
-        console.log(auth.user.uuid, commentUser)
         if (auth.isAuthenticated){
             if (auth.user.uuid === user_uuid) {
                 return true;
