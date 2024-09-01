@@ -1,21 +1,22 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react';
 import classes from '../../../styles/Body/Login/LoginBlock.module.css';
 import AuthBtn from "./authBtn/AuthBtn";
-import Modal from "../../UI/modal_error/Modal";
+// import Modal from "../../UI/modal_error/Modal";
 
 const LoginBlock = () => {
 
-    const [modalInfoIsOpen, setModalInfoIsOpen] = useState(false);
+    // const [modalInfoIsOpen, setModalInfoIsOpen] = useState(false);
 
     function redirectToAuth() {
-        setModalInfoIsOpen(true)
-        // window.location.replace("http://id.vchern.me/id/login/");
+        // setModalInfoIsOpen(true)
+        window.location.replace("http://id.vchern.me/id/login/");
     }
 
     return (
         <div className={classes.container}>
-            <Modal isOpen={modalInfoIsOpen} onClose={()=> setModalInfoIsOpen(false)}
-            title={"Упс..."} msg={"Данная возможность будет доступна только с 1 сентября 🥳"}/>
+            {/*<Modal isOpen={modalInfoIsOpen} onClose={()=> setModalInfoIsOpen(false)}*/}
+            {/*title={"Упс..."} msg={"Данная возможность будет доступна только с 1 сентября 🥳"}/>*/}
             <div className={classes.containerAuthBtn}>
                 <AuthBtn onClick={redirectToAuth}/>
             </div>
