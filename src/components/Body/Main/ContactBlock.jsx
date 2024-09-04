@@ -8,8 +8,6 @@ const ContactBlock = () => {
         <div className={classes.container}>
             <div className={classes.wrapperTextMain}>
                 <h1 className={classes.textMain}>Связь со мной</h1>
-                <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f54a-fe0f.png" alt=""
-                    className={classes.stikerMain}/>
             </div>
             <div className={classes.wrapperContactInfo}>
                 <div className={classes.wrapperMeContact}>

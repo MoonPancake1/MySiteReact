@@ -1,6 +1,7 @@
 .container {
     display: block;
     width: 100%;
+    margin-bottom: 100px;
 }
 
 .wrapperTextMain {
@@ -22,10 +23,7 @@
 }
 
 .wrapperPortfolio {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 50px;
 }
 
 .wrapperStikerPlane {

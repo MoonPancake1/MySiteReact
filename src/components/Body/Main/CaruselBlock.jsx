@@ -34,10 +34,6 @@ const CaruselBlock = () => {
             <div className={classes.wrapperImagesCarusel}>
                 <Carusel images={imagesData} />
             </div>
-            <div className={classes.wrapperStiker}>
-                <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f3a0.png" alt=""
-                className={classes.stiker}/>
-            </div>
         </div>
     );
 };
