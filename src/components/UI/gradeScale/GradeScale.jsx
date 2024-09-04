@@ -21,7 +21,6 @@ const GradeScale = (props) => {
             if (auth.isAuthenticated) {
                 const grade = await ProjectService.checkSelectGrade(auth.accessToken, props.project_id);
                 if (!grade.detail) {
-                    console.log(grade)
                     setGrade(grade);
                 }
             } else {
@@ -62,7 +61,7 @@ const GradeScale = (props) => {
                                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((gradeNumber) => (
                                     <GradeButton grade={gradeNumber} key={gradeNumber}
                                                  canSelectGrade={checkCanSelectGrade}
-                                                 auth={auth}/>
+                                                 auth={auth} createGrade={props.createGrade}/>
                                 ))}
                             </div>
                         </div>

@@ -67,13 +67,10 @@ const ProjectBlock = (props) => {
                             </button>
                         </a>
                     </div>
-                    <div className={classes.containerSputnikEmoji}>
-                        <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f6f0-fe0f.png" alt=""/>
-                    </div>
                 </div>
             </div>
             <div className={classes.containerGrade}>
-                <GradeScale project_id={props.project_id}/>
+                <GradeScale project_id={props.project_id} createGrade={props.createGrade}/>
             </div>
             <div className={classes.containerCommentsList}>
                 <CommentsBlock project_id={props.project_id}/>

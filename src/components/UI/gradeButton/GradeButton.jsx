@@ -1,17 +1,11 @@
 import React from 'react';
 import classes from "./GradeButton.module.css";
-import ProjectService from "../../../Api/ProjectService";
-import {useParams} from "react-router-dom";
 
 const GradeButton = (props) => {
 
-    const params = useParams();
-
     async function selectGrade () {
         if (props.canSelectGrade()) {
-            console.log(props.grade)
-            await ProjectService.createGrade(props.auth.accessToken,
-                params.id, props.grade);
+            await props.createGrade(props.grade);
         }
     }
 

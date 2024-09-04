@@ -45,7 +45,6 @@ export default class ProjectService {
 
     // GRADES
     static async createGrade(token, project_id, grade) {
-        console.log(grade)
         const resp = await axios.post(`https://id.vchern.me/main/grade/`,
             {
                 project_id: project_id,
