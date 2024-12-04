@@ -9,7 +9,6 @@
 
 .infoCard {
     display: block;
-    justify-items: flex-end;
     width: 100%;
     max-height: 600px;
 }
